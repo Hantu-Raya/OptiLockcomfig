@@ -1,0 +1,1 @@
+# VERY IMPORTANT MODS FOR LOW SPEC PCs USING MAX FPS CONFIGS. Sinner's Light Fix is important for making sure the Sinners Lights are still visible despite mip bias being over 4.

@@ -1,0 +1,1 @@
+a "high-end" config i threw together adding back certain lighting and shadow effects. very unoptimized and very experimental. Might not even want to use it.

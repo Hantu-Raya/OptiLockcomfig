@@ -1,0 +1,1 @@
+# boot's MAX FPS config via [Sqooky's Git](https://github.com/Sqooky/OptimizationLock/tree/main/boot's%20maxium%20fps%20config)
