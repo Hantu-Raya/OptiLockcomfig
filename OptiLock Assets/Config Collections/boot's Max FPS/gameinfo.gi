@@ -16,6 +16,9 @@
 	tonemapping 0 
 	GameData	"citadel.fgd"
 	
+	PGIVersion "6E09D3ED5A47F6A97443813F0E00F90BAA435918F82DF0C9B5DA46D27A33D903"
+
+
 	Localize
 	{
 		DuplicateTokensAssert	1
@@ -620,8 +623,7 @@ r_enable_cubemap_fog "0"                                        // Disables cube
 r_citadel_fog_quality "0"                                       // Deadlock/Citadel fog quality (0 = lowest). [def: "1"]
 
 // ================ POST-PROCESS & MISC  ================ \\
-mat_colcorrection_disableentities "0"                           // Allows entity-based color correction. [def: "0"]
-mat_colorcorrection "1"                                         // Disables/ Enables color correction. [def: "1"]
+mat_colorcorrection "0"                                         // Disables color correction post-process pass. [def: "1"]
 r_depth_of_field "0"                                            // Disables depth of field. [def: "1"]
 r_effects_bloom "0"                                             // Disables effects bloom. [def: "1"]
 r_post_bloom "0"                                                // Disables post-process bloom. [def: "1"]
@@ -649,8 +651,8 @@ battery_saver "0"                                               // Disables batt
 ik_final_fixup_enable "0"                                       // Disables final IK fixup pass (cheaper animations, potentially less accurate). [def: "1"]
 ik_fabrik_align_chain "0"                                       // Disables FABRIK chain alignment in IK (cheaper). [def: "1"]
 r_light_flickering_enabled "false"                                  // Enables light flicker effects where used. [def: "1"]
-r_multiscattering "1"                                           // Enables multi-scattering lighting approximation. [def: "1"]
-r_lightmap_bicubic_filtering "1"                                // Enables bicubic filtering on lightmaps. [def: "1"]
+r_multiscattering "0"                                           // Disables multi-scattering lighting approximation. [def: "1"]
+r_lightmap_bicubic_filtering "0"                                // Use bilinear instead of bicubic lightmap filtering (cheaper). [def: "1"]
 zipline_use_new_latch "0"                                       // Use the new latch motion for getting on a zipline. 0: Dont use 1: Just those with b_UseNewZipLineSetup 2: Everyone use. [def: "2"]
 citadel_damage_text_show_effectiveness "0"                      // Shows extra “effectiveness” info in damage text (e.g., resist/weakness style feedback). [def: "0"]
 citadel_minimap_use_canvas_for_neutrals "0"                     // Uses an alternate “canvas” rendering path for neutral icons on the minimap (render path toggle). [def: "1"]
@@ -735,7 +737,7 @@ r_drawparticles "true" // default: true - might change to false again
 r_particle_batch_collections "true" // default: false
 // r_propsmaxdist "100" // default: 1200
 r_render_portals "true" // default: true
-r_rendersun "false" // default: true
+// r_rendersun — already set to "0" in SHADOWS section above
 r_texture_budget_threshold "0.7" //default: 0.9
 r_texture_lod_scale "4" // default: 1
 r_texture_stream_mip_bias "8" // default: 0 ; might change to 3
@@ -954,10 +956,7 @@ r_particle_model_per_thread_count "32"
 citadel_cinematic_intro_duration_npc "0.01"
 citadel_cinematic_intro_duration_player "0.01"
 citadel_cinematic_intro_enabled "-1"
-violence_ablood "false"
-violence_agibs "false"
-violence_hblood "false"
-violence_hgibs "false"
+// violence_ablood/agibs/hblood/hgibs — already set to "0" in GAMEPLAY section above
 nav_obstruction_async_update "true"
 r_async_compute_fog "true"
 sparseshadowtree_parallel_generation "2"
@@ -996,6 +995,32 @@ mm_idle_enabled "false"
 citadel_commend_toast_enemy_seconds "0"
 citadel_commend_toast_seconds "0"
 citadel_match_details_lane_stats_time "360"
+
+// --- NEW OPTIMIZATIONS ---
+// Only convars that DIFFER from engine default are listed here.
+
+// Texture Streaming — reduce per-frame streaming cost to prevent hitching
+r_texture_stream_throttle_amount "3"             // Stream work-units per frame (lower = less stutter). [def: "10"]
+r_texture_stream_throttle_count "1"              // Max texture stream ops per frame. [def: "3"]
+r_texture_eager_eviction "1"                     // Aggressively evict unused textures from VRAM. [def: "0"]
+
+// Depth Prepass Culling — cull more tiny objects from depth pass
+r_citadel_depth_prepass_cull_threshold "120"     // Screen-pixel threshold to cull from depth prepass. [def: "60"]
+
+// Draw Call Batching — merge display lists per render layer to cut CPU draw overhead
+sc_force_single_display_list_per_layer "1"       // Single display list per layer (batching). [def: "0"]
+
+// Resource System Pacing — limit async loader time-steal per frame
+engine_max_resource_system_update_time "2"       // Max ms resource system may run per frame. [def: "5"]
+
+// GPU Memory — model-based VRAM tracking avoids slow OS driver VRAM API calls
+r_use_memory_budget_model "1"                    // Use memory model instead of OS VRAM queries. [def: "0"]
+
+// Audio — skip latency auto-detection (manual snd_mixahead already set)
+snd_autodetect_latency "0"                       // Disable runtime audio latency detection. [def: "1"]
+
+// Console Overhead — suppress frametime warning spew to console
+engine_frametime_warnings_enable "0"             // Disable frametime-exceeded console warnings. [def: "1"]
 
 
 // This was all developed by boot, he is my personal hero...
@@ -1103,7 +1128,7 @@ citadel_match_details_lane_stats_time "360"
 
 		"snd_event_browser_focus_events" "true"
 
-		"cl_max_particle_pvs_aabb_edge_length" "100"
+		"cl_max_particle_pvs_aabb_edge_length" "50"
 		
 		// Allow aggregation of particles (for perf)
 		"cl_aggregate_particles" "true"
