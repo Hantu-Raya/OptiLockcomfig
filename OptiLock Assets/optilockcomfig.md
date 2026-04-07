@@ -16,9 +16,9 @@ help much as textures are tied to VRAM size and the game doesn't normally use mo
 
 **So first and foremost**
 ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  - Use preexisting comfig-app code to start the development from there, and edit everything as we seem fit.
-      Transparent background images
-      Text fonts
-      Community Config Presets
-      Benchmarking Images
-      Setting names and Drop down values
+  <ins>Use preexisting comfig-app code to start the development from there, and edit everything as we seem fit.</ins> 
+  Transparent background images
+  Text fonts
+  Community Config Presets
+  Benchmarking Images
+  Setting names and Drop down values
