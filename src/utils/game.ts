@@ -708,6 +708,7 @@ async function getGameResourceFile(path) {
     return content;
   } catch (e) {
     console.error(`Failed reading ${path}`, e);
+    return null;
   }
 }
 
@@ -727,6 +728,12 @@ async function getGameResourceDir(path) {
       headers,
     },
   );
+  if (!Array.isArray(contents)) {
+    if (contents) {
+      console.error(`Failed reading directory ${path}`, contents);
+    }
+    return [];
+  }
   const result = [];
   for (const file of contents) {
     if (file.type === "file") {
@@ -1140,7 +1147,10 @@ async function getGameResource(path, file, regex?) {
     const files = folder.filter((f) => re.test(f));
     const res = [];
     for (const file of files) {
-      res.push(await getGameResourceFile(file));
+      const content = await getGameResourceFile(file);
+      if (content) {
+        res.push(content);
+      }
     }
     return res;
   } else {
@@ -1177,7 +1187,14 @@ async function initGameData() {
     "tf/resource/",
     `tf_${language.toLowerCase()}.txt`,
   );
-  languageCache[langRes.lang.Language] = langRes.lang.Tokens;
+  if (langRes?.lang?.Language && langRes?.lang?.Tokens) {
+    languageCache[langRes.lang.Language] = langRes.lang.Tokens;
+  } else if (!languageCache[language]) {
+    languageCache[language] = {};
+  }
+  if (!Array.isArray(tfItems)) {
+    return;
+  }
   for (const item of tfItems) {
     const data = item.WeaponData;
     if (!blockedItems.includes(data.classname)) {

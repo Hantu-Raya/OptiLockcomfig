@@ -176,6 +176,15 @@ export default defineConfig({
     inlineStylesheets: "never",
   },
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          quietDeps: true,
+          silenceDeprecations: ["import", "global-builtin", "color-functions"],
+        },
+      },
+    },
+
     build: {
       sourcemap: true,
       assetsInlineLimit: 0,

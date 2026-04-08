@@ -26,6 +26,28 @@ export default function Items({ hash }) {
   }
 
   const playerClasses = Object.keys(globalThis.itemUsedBy);
+  const playerClassTabs = playerClasses.map((playerClass) => {
+    const classItems = globalThis.itemUsedBy[playerClass]
+      .map((i) => [i, globalThis.items[i]])
+      .filter(([, item]) => item);
+    if (globalThis.items["default"]) {
+      classItems.push(["default", globalThis.items["default"]]);
+    }
+
+    return (
+      <Tab
+        key={`${playerClass}-tab`}
+        eventKey={playerClass}
+        title={playerClass[0].toUpperCase() + playerClass.slice(1)}
+      >
+        <ItemsInner
+          key={`${playerClass}-itemsinner-${resetKey}`}
+          playerClass={playerClass}
+          items={Object.fromEntries(classItems)}
+        />
+      </Tab>
+    );
+  });
 
   return (
     <div className="items-root">
@@ -38,24 +60,7 @@ export default function Items({ hash }) {
             setResetKey={setResetKey}
           />
         </Tab>
-        {playerClasses.map((playerClass) => (
-          <Tab
-            key={`${playerClass}-tab`}
-            eventKey={playerClass}
-            title={playerClass[0].toUpperCase() + playerClass.slice(1)}
-          >
-            <ItemsInner
-              key={`${playerClass}-itemsinner-${resetKey}`}
-              playerClass={playerClass}
-              items={Object.fromEntries(
-                globalThis.itemUsedBy[playerClass].map((i) => [
-                  i,
-                  globalThis.items[i],
-                ]),
-              )}
-            />
-          </Tab>
-        ))}
+        {playerClassTabs}
       </Tabs>
     </div>
   );

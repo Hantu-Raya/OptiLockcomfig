@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "./bootstrap";
+@use "./bootstrap" as *;
 
 // 8. Add additional custom code here
 
@@ -142,9 +142,9 @@ section {
 #action-container {
   background: linear-gradient(90deg,
       rgba(38, 50, 56, 0.1) 10%,
-      mix(rgba(0, 150, 136, 0.9), rgba(38, 50, 56, 0.1), 50%) 30%,
+      color.mix(rgba(0, 150, 136, 0.9), rgba(38, 50, 56, 0.1), 50%) 30%,
       rgba(0, 150, 136, 1) 50%,
-      mix(rgba(0, 150, 136, 0.9), rgba(38, 50, 56, 0.1), 50%) 70%,
+      color.mix(rgba(0, 150, 136, 0.9), rgba(38, 50, 56, 0.1), 50%) 70%,
       rgba(38, 50, 56, 0.1) 90%);
   margin-left: -50vw;
   margin-right: -50vw;
@@ -157,7 +157,7 @@ section {
 }
 
 #action-container a:not(.btn):hover {
-  color: lighten($teal, 50%);
+  color: color.adjust($teal, $lightness: 50%);
 }
 
 // Base

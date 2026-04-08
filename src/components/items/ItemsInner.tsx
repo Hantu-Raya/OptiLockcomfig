@@ -24,6 +24,9 @@ function calculateItemSlots(playerClass, items) {
   const usedItems = new Set();
 
   function addItemToSlot(item) {
+    if (!item) {
+      return;
+    }
     const slot = getNormalizedSlotName(item);
     if (!(slot in slots)) {
       slots[slot] = [];
@@ -32,8 +35,12 @@ function calculateItemSlots(playerClass, items) {
   }
 
   for (const item of stockItems[playerClass]) {
+    const itemData = items[item];
+    if (!itemData) {
+      continue;
+    }
     usedItems.add(item);
-    addItemToSlot(items[item]);
+    addItemToSlot(itemData);
   }
 
   for (const item of Object.values(items)) {
@@ -53,7 +60,14 @@ function calculateItemSlots(playerClass, items) {
     }
   }
 
-  const firstKey = `${playerClass}-${slots[slotNames[0]][0].classname}`;
+  if (!slotNames.length && items.default) {
+    slots.default = [items.default];
+    slotNames.push("default");
+  }
+
+  const firstSlot = slotNames[0];
+  const firstItem = firstSlot ? slots[firstSlot]?.[0] : null;
+  const firstKey = `${playerClass}-${firstItem?.classname ?? "default"}`;
 
   return [slots, slotNames, firstKey];
 }

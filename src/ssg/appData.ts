@@ -44,6 +44,9 @@ async function initItemData(gameData) {
       const classItems = itemUsedBy[playerClass];
       for (const item of classItems) {
         const itemData = gm.items[item];
+        if (!itemData) {
+          continue;
+        }
         let key = itemData.printname;
         if (classNameToName[itemData.classname]) {
           key = classNameToName[itemData.classname];

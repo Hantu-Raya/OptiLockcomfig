@@ -1,3 +1,4 @@
+@use "sass:color";
 .download-progress {
   --bs-progress-height: 1px;
 
@@ -72,7 +73,7 @@
 }
 
 .module-row:hover {
-  background: mix(#000, #fff, 90%);
+  background: color.mix(#000, #fff, 90%);
   box-shadow: 0 0 5px #000;
 }
 
