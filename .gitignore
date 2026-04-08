@@ -22,3 +22,5 @@ node_modules/
 
 # generated files
 generated/
+/.playwright-cli
+scripts/convar-doc-pass.mjs
