@@ -1,0 +1,18 @@
+---
+---
+
+<deadlock-app-loader></deadlock-app-loader>
+
+<script>
+  import { deadlockApp } from "@utils/deadlock";
+
+  class DeadlockAppLoader extends HTMLElement {
+    async connectedCallback() {
+      await deadlockApp();
+    }
+  }
+
+  if (!customElements.get("deadlock-app-loader")) {
+    customElements.define("deadlock-app-loader", DeadlockAppLoader);
+  }
+</script>

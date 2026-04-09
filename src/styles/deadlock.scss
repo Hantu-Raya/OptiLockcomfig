@@ -1,0 +1,334 @@
+@use "sass:color";
+
+$dl-primary: #009688;
+$dl-secondary: #b2dfdb;
+$dl-bg-dark: #0e1011;
+$dl-footer-bg: #212121;
+$dl-bg-card: #212529;
+$dl-text: #f8f9fa;
+$dl-text-muted: #a0a0a0;
+$dl-border: rgb(0 0 0 / 60%);
+
+@keyframes dl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dl-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.deadlock-app {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgb(0 150 136 / 18%) 0, rgb(14 16 17 / 0%) 18rem),
+    linear-gradient(180deg, $dl-bg-dark 0%, $dl-bg-dark 72%, $dl-footer-bg 100%);
+  color: $dl-text;
+  font-family: var(--bs-body-font-family);
+
+  .dl-content-shell {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .dl-main-card {
+    background-color: var(--bs-body-bg);
+    margin-top: 0;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .dl-main-card hr {
+    margin: 0;
+  }
+
+  .dl-banner {
+    position: relative;
+    min-height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgb(0 150 136 / 30%) 0%, rgb(14 16 17 / 45%) 42%, rgb(14 16 17 / 85%) 100%),
+        linear-gradient(to bottom, rgb(14 16 17 / 10%) 0%, rgb(14 16 17 / 88%) 100%);
+      z-index: 1;
+    }
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .dl-banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 36rem;
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      color: $dl-secondary;
+      margin: 0;
+    }
+  }
+
+  .dl-tier-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2em 0.6em;
+    border-radius: 0;
+
+    &.performance {
+      background: rgb(0 150 136 / 18%);
+      color: #8ce8df;
+    }
+
+    &.balanced {
+      background: rgb(0 150 136 / 28%);
+      color: #d6f5f1;
+    }
+
+    &.quality {
+      background: rgb(178 223 219 / 20%);
+      color: $dl-secondary;
+    }
+  }
+
+  .dl-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .dl-panel {
+    background: $dl-bg-card;
+    border: 1px solid $dl-border;
+    box-shadow: inset 0 0 5px #000;
+    padding: 1.25rem;
+  }
+
+  .dl-helper-copy {
+    color: $dl-text-muted;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .dl-preset-nav {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .dl-preset-nav .nav-link {
+    border: 0;
+    cursor: pointer;
+  }
+
+  .dl-preset-detail {
+    padding: 1.25rem;
+  }
+
+  .dl-preset-meta {
+    color: $dl-text-muted;
+  }
+
+  .dl-preset-tip {
+    color: $dl-secondary;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 20rem;
+  }
+
+  .dl-addon-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid rgb(178 223 219 / 12%);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .dl-addon-info {
+      flex: 1;
+    }
+
+    .dl-addon-name {
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .dl-addon-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.35rem 0;
+    }
+
+    .dl-addon-desc {
+      color: $dl-text-muted;
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+  }
+
+  .dl-path-display {
+    align-items: center;
+    background: rgb(0 150 136 / 15%);
+    border: 1px solid rgb(178 223 219 / 12%);
+    color: $dl-secondary;
+    display: flex;
+    font-family: monospace;
+    font-size: 0.85rem;
+    min-height: 46px;
+    padding: 0.75rem 1rem;
+    word-break: break-all;
+
+    &.is-empty {
+      color: $dl-text-muted;
+    }
+  }
+
+  .dl-recommended,
+  .dl-category-badge {
+    border-radius: 0;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .dl-recommended {
+    background: rgb(0 150 136 / 22%);
+    color: $dl-secondary;
+  }
+
+  .dl-category-badge {
+    background: rgb(178 223 219 / 16%);
+    color: #d6f5f1;
+  }
+
+  .dl-install-panel {
+    padding: 1.25rem;
+  }
+
+  .dl-install-picker {
+    display: grid;
+    gap: 0;
+    grid-template-columns: auto 1fr;
+  }
+
+  .btn {
+    font-weight: 600;
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    min-height: 46px;
+  }
+
+  .dl-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgb(0 150 136 / 22%);
+    border-top-color: $dl-primary;
+    border-radius: 50%;
+    animation: dl-spin 0.8s linear infinite;
+  }
+
+  .dl-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 0;
+      filter: grayscale(0.3);
+      transition: filter 0.2s, transform 0.2s;
+
+      &:hover {
+        filter: none;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .accordion-item {
+    background: transparent !important;
+    border-color: $dl-border !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .accordion-button {
+    background: $dl-bg-card !important;
+    color: $dl-text !important;
+
+    &::after {
+      filter: invert(1);
+    }
+
+    &:not(.collapsed) {
+      background: color.mix($dl-primary, $dl-bg-card, 20%) !important;
+      color: $dl-text !important;
+    }
+  }
+
+  .accordion-body {
+    background: $dl-bg-card;
+    color: $dl-text;
+  }
+
+  .form-select,
+  .form-control {
+    background-color: $dl-bg-dark;
+    border-color: rgb(108 117 125);
+    color: $dl-text;
+  }
+
+  .form-select:focus,
+  .form-control:focus {
+    border-color: color.adjust($dl-primary, $lightness: 15%);
+    box-shadow: 0 0 0 1px rgb(0 150 136 / 35%);
+  }
+
+  @media (width <= 767px) {
+    .dl-section {
+      padding: 1.5rem 1rem;
+    }
+
+    .dl-banner {
+      min-height: 220px;
+      padding: 1.5rem;
+    }
+
+    .dl-install-picker {
+      grid-template-columns: 1fr;
+    }
+
+    .dl-preset-tip {
+      max-width: none;
+    }
+  }
+
+  animation: dl-fade-in 0.4s ease-out;
+}

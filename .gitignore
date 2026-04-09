@@ -24,3 +24,5 @@ node_modules/
 generated/
 /.playwright-cli
 scripts/convar-doc-pass.mjs
+/out
+/.claude

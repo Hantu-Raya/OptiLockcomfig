@@ -1,5 +1,7 @@
 ---
 const { pageName } = Astro.props;
+const isTF2 = ["app", "huds", "hits", "quickplay"].includes(pageName);
+const isDeadlock = pageName === "app-dl";
 ---
 
 <script>
@@ -15,49 +17,131 @@ const { pageName } = Astro.props;
       id="appDropdown"
       role="button"
       data-bs-toggle="dropdown"
-      aria-expanded="false"><strong>{pageName}</strong></a
-    >
-    <ul
-      class="dropdown-menu dropdown-menu-dark"
+      aria-expanded="false"
+    ><strong>{isTF2 ? "TF2" : isDeadlock ? "Deadlock" : pageName}</strong></a>
+    <div
+      class="dropdown-menu dropdown-menu-dark game-picker-menu"
       aria-labelledby="appDropdown"
       id="appDropdownMenu"
     >
-      <li>
-        <a
-          class=`dropdown-item ${pageName === "app" ? "active" : ""}`
-          href="/app/"><span class="far fa-window-maximize fa-fw"></span> app</a
-        >
-      </li>
-      <li>
-        <a
-          class=`dropdown-item ${pageName === "huds" ? "active" : ""}`
-          href="/huds/1"><span class="fas fa-display fa-fw"></span> huds</a
-        >
-      </li>
-      <li>
-        <a
-          class=`dropdown-item ${pageName === "hits" ? "active" : ""}`
-          href="/hits/hs/1"
-          ><span class="fas fa-volume-high fa-fw"></span> hits</a
-        >
-      </li>
-      <li>
-        <a
-          class=`dropdown-item ${pageName === "quickplay" ? "active" : ""}`
-          href="/quickplay"
-          ><span class="far fa-compass fa-fw"></span> quickplay</a
-        >
-      </li>
-      <li>
-        <a class=`dropdown-item` href="https://teamcomtress.com"
-          ><img
-            src="/img/tc2/favicon.ico"
-            alt=""
-            class="d-inline"
-            style="width: 20px; height: 18px;vertical-align: sub;background: #b2dfdb;padding: 1px 2px"
-          /> team comtress 2</a
-        >
-      </li>
-    </ul>
+      <a href="/app/" class={`game-picker-card game-picker-tf2${isTF2 ? " game-picker-active" : ""}`}>
+        <div class="game-picker-bg"></div>
+        <div class="game-picker-content">
+          <div class="game-picker-logo">
+            <img src="/img/mastercomfig_logo_transparent_i.svg" alt="" width="32" height="32" />
+          </div>
+          <div class="game-picker-title">comfig</div>
+          <div class="game-picker-sub">Team Fortress 2</div>
+        </div>
+      </a>
+      <a href="/app-dl/" class={`game-picker-card game-picker-dl${isDeadlock ? " game-picker-active" : ""}`}>
+        <div class="game-picker-bg"></div>
+        <div class="game-picker-content">
+          <div class="game-picker-title">OptiLock</div>
+          <div class="game-picker-sub">Deadlock</div>
+        </div>
+      </a>
+    </div>
   </li>
 </ul>
+
+<style>
+  .game-picker-menu {
+    display: none;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    min-width: 380px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .game-picker-menu.show {
+    display: flex;
+  }
+
+  .game-picker-card {
+    position: relative;
+    flex: 1;
+    height: 160px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    transition: flex 0.3s ease;
+  }
+  .game-picker-card:hover {
+    flex: 1.4;
+  }
+
+  /* TF2 card — teal gradient */
+  .game-picker-tf2 .game-picker-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #004d40 0%, #00796b 50%, #26a69a 100%);
+    transition: opacity 0.3s ease;
+    opacity: 0.7;
+  }
+  .game-picker-tf2:hover .game-picker-bg {
+    opacity: 1;
+  }
+
+  /* Deadlock card — wallpaper */
+  .game-picker-dl .game-picker-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/deadlock/backgrounds/bg1.jpg');
+    background-size: cover;
+    background-position: center top;
+    filter: brightness(0.45);
+    transition: filter 0.3s ease;
+  }
+  .game-picker-dl:hover .game-picker-bg {
+    filter: brightness(0.7);
+  }
+
+  .game-picker-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  .game-picker-logo {
+    margin-bottom: 4px;
+    opacity: 0.9;
+  }
+  .game-picker-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .game-picker-sub {
+    font-size: 0.72rem;
+    opacity: 0.7;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Active indicator — top accent bar */
+  .game-picker-active::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: #fff;
+    opacity: 0.9;
+  }
+  .game-picker-tf2.game-picker-active::after {
+    background: #80cbc4;
+  }
+  .game-picker-dl.game-picker-active::after {
+    background: #ff6b35;
+  }
+
+  /* Divider between cards */
+  .game-picker-card + .game-picker-card {
+    border-left: 1px solid rgba(255,255,255,0.12);
+  }
+</style>

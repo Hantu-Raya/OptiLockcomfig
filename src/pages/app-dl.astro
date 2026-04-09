@@ -1,0 +1,56 @@
+---
+import Layout from "@layouts/Layout.astro";
+import BaseHead from "@components/head/BaseHead.astro";
+import PreloadHead from "@components/head/PreloadHead.astro";
+import ImportHead from "@components/head/ImportHead.astro";
+import MainHead from "@components/head/MainHead.astro";
+import Body from "@components/Body.astro";
+import Footer from "@components/Footer.astro";
+import NavSelector from "@components/NavSelector.astro";
+import DeadlockApp from "@components/deadlock/DeadlockApp";
+import "@styles/deadlock.scss";
+---
+
+<Layout>
+  <head>
+    <BaseHead />
+    <PreloadHead />
+    <ImportHead>
+      <script>
+        import { Collapse } from "bootstrap";
+      </script>
+    </ImportHead>
+    <MainHead title="OptiLock — Deadlock Configurator" />
+  </head>
+  <Body>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-teal">
+      <div class="container g-0">
+        <span class="navbar-brand">
+          <img
+            src="/img/mastercomfig_logo_transparent_i.svg"
+            alt=""
+            class="d-inline-block align-text-top"
+            width="24"
+            height="24"
+          />
+          <span class="d-none d-md-inline"> comfig</span>
+        </span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDl"
+          aria-controls="navbarNavDl"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <NavSelector pageName="app-dl" />
+        <div class="collapse navbar-collapse" id="navbarNavDl"></div>
+      </div>
+    </nav>
+    <DeadlockApp client:only="react" />
+    <Footer />
+  </Body>
+</Layout>
