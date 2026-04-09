@@ -1,0 +1,1186 @@
+{
+  "input": "F:\\Users\\FoxOS_User\\Desktop\\Deadlock-mods-collection\\convars.txt",
+  "missingCount": 2439,
+  "resolvedCount": 2,
+  "unresolvedCount": 2437,
+  "resolvedKeys": [
+    "r_flashlightambient",
+    "r_freezeparticles"
+  ],
+  "unresolvedByPrefix": [
+    {
+      "prefix": "citadel",
+      "count": 813
+    },
+    {
+      "prefix": "nav",
+      "count": 209
+    },
+    {
+      "prefix": "r",
+      "count": 200
+    },
+    {
+      "prefix": "cl",
+      "count": 125
+    },
+    {
+      "prefix": "snd",
+      "count": 113
+    },
+    {
+      "prefix": "ai",
+      "count": 99
+    },
+    {
+      "prefix": "panorama",
+      "count": 77
+    },
+    {
+      "prefix": "sv",
+      "count": 58
+    },
+    {
+      "prefix": "sc",
+      "count": 52
+    },
+    {
+      "prefix": "joy",
+      "count": 45
+    },
+    {
+      "prefix": "mat",
+      "count": 33
+    },
+    {
+      "prefix": "animgraph",
+      "count": 28
+    },
+    {
+      "prefix": "csm",
+      "count": 27
+    },
+    {
+      "prefix": "phys",
+      "count": 26
+    },
+    {
+      "prefix": "ik",
+      "count": 22
+    },
+    {
+      "prefix": "lb",
+      "count": 19
+    },
+    {
+      "prefix": "npcsolve",
+      "count": 19
+    },
+    {
+      "prefix": "ragdoll",
+      "count": 17
+    },
+    {
+      "prefix": "adsp",
+      "count": 15
+    },
+    {
+      "prefix": "fog",
+      "count": 15
+    },
+    {
+      "prefix": "ent",
+      "count": 14
+    },
+    {
+      "prefix": "navlocal",
+      "count": 14
+    },
+    {
+      "prefix": "ping",
+      "count": 14
+    },
+    {
+      "prefix": "c",
+      "count": 13
+    },
+    {
+      "prefix": "func",
+      "count": 13
+    },
+    {
+      "prefix": "kelvin",
+      "count": 13
+    },
+    {
+      "prefix": "voice",
+      "count": 13
+    },
+    {
+      "prefix": "dsp",
+      "count": 12
+    },
+    {
+      "prefix": "debug",
+      "count": 11
+    },
+    {
+      "prefix": "player",
+      "count": 11
+    },
+    {
+      "prefix": "npc",
+      "count": 10
+    },
+    {
+      "prefix": "prop",
+      "count": 10
+    },
+    {
+      "prefix": "pestilence",
+      "count": 9
+    },
+    {
+      "prefix": "engine",
+      "count": 8
+    },
+    {
+      "prefix": "mortar",
+      "count": 8
+    },
+    {
+      "prefix": "nano",
+      "count": 8
+    },
+    {
+      "prefix": "tv",
+      "count": 8
+    },
+    {
+      "prefix": "g",
+      "count": 7
+    },
+    {
+      "prefix": "navspace",
+      "count": 7
+    },
+    {
+      "prefix": "volume",
+      "count": 7
+    },
+    {
+      "prefix": "labelled",
+      "count": 6
+    },
+    {
+      "prefix": "pred",
+      "count": 6
+    },
+    {
+      "prefix": "server",
+      "count": 6
+    },
+    {
+      "prefix": "sk",
+      "count": 6
+    },
+    {
+      "prefix": "cloth",
+      "count": 5
+    },
+    {
+      "prefix": "particle",
+      "count": 5
+    },
+    {
+      "prefix": "shatterglass",
+      "count": 5
+    },
+    {
+      "prefix": "wind",
+      "count": 5
+    },
+    {
+      "prefix": "cam",
+      "count": 4
+    },
+    {
+      "prefix": "chat",
+      "count": 4
+    },
+    {
+      "prefix": "filesystem",
+      "count": 4
+    },
+    {
+      "prefix": "scene",
+      "count": 4
+    },
+    {
+      "prefix": "vprof",
+      "count": 4
+    },
+    {
+      "prefix": "hud",
+      "count": 3
+    },
+    {
+      "prefix": "input",
+      "count": 3
+    },
+    {
+      "prefix": "iv",
+      "count": 3
+    },
+    {
+      "prefix": "mesh",
+      "count": 3
+    },
+    {
+      "prefix": "mp",
+      "count": 3
+    },
+    {
+      "prefix": "opus",
+      "count": 3
+    },
+    {
+      "prefix": "save",
+      "count": 3
+    },
+    {
+      "prefix": "break",
+      "count": 2
+    },
+    {
+      "prefix": "camera",
+      "count": 2
+    },
+    {
+      "prefix": "cq",
+      "count": 2
+    },
+    {
+      "prefix": "footstep",
+      "count": 2
+    },
+    {
+      "prefix": "hairsim",
+      "count": 2
+    },
+    {
+      "prefix": "host",
+      "count": 2
+    },
+    {
+      "prefix": "lifesteal",
+      "count": 2
+    },
+    {
+      "prefix": "lightquery",
+      "count": 2
+    },
+    {
+      "prefix": "minimap",
+      "count": 2
+    },
+    {
+      "prefix": "modifier",
+      "count": 2
+    },
+    {
+      "prefix": "movement",
+      "count": 2
+    },
+    {
+      "prefix": "multigpu",
+      "count": 2
+    },
+    {
+      "prefix": "parallel",
+      "count": 2
+    },
+    {
+      "prefix": "props",
+      "count": 2
+    },
+    {
+      "prefix": "rope",
+      "count": 2
+    },
+    {
+      "prefix": "script",
+      "count": 2
+    },
+    {
+      "prefix": "skel",
+      "count": 2
+    },
+    {
+      "prefix": "skeleton",
+      "count": 2
+    },
+    {
+      "prefix": "sos",
+      "count": 2
+    },
+    {
+      "prefix": "trigger",
+      "count": 2
+    },
+    {
+      "prefix": "update",
+      "count": 2
+    },
+    {
+      "prefix": "vismon",
+      "count": 2
+    },
+    {
+      "prefix": "always",
+      "count": 1
+    },
+    {
+      "prefix": "anim",
+      "count": 1
+    },
+    {
+      "prefix": "animated",
+      "count": 1
+    },
+    {
+      "prefix": "animgraph2",
+      "count": 1
+    },
+    {
+      "prefix": "attached",
+      "count": 1
+    },
+    {
+      "prefix": "audio",
+      "count": 1
+    },
+    {
+      "prefix": "automatically",
+      "count": 1
+    },
+    {
+      "prefix": "bookworm",
+      "count": 1
+    },
+    {
+      "prefix": "boss",
+      "count": 1
+    },
+    {
+      "prefix": "breakable",
+      "count": 1
+    },
+    {
+      "prefix": "bug",
+      "count": 1
+    },
+    {
+      "prefix": "cc",
+      "count": 1
+    },
+    {
+      "prefix": "check",
+      "count": 1
+    },
+    {
+      "prefix": "clear",
+      "count": 1
+    },
+    {
+      "prefix": "client",
+      "count": 1
+    },
+    {
+      "prefix": "commentary",
+      "count": 1
+    },
+    {
+      "prefix": "crosshair",
+      "count": 1
+    },
+    {
+      "prefix": "damage",
+      "count": 1
+    },
+    {
+      "prefix": "deadlock",
+      "count": 1
+    },
+    {
+      "prefix": "decalfrequency",
+      "count": 1
+    },
+    {
+      "prefix": "default",
+      "count": 1
+    },
+    {
+      "prefix": "demo",
+      "count": 1
+    },
+    {
+      "prefix": "destructible",
+      "count": 1
+    },
+    {
+      "prefix": "dev",
+      "count": 1
+    },
+    {
+      "prefix": "diffcheck",
+      "count": 1
+    },
+    {
+      "prefix": "display",
+      "count": 1
+    },
+    {
+      "prefix": "dump",
+      "count": 1
+    },
+    {
+      "prefix": "enable",
+      "count": 1
+    },
+    {
+      "prefix": "execute",
+      "count": 1
+    },
+    {
+      "prefix": "experimental",
+      "count": 1
+    },
+    {
+      "prefix": "fade",
+      "count": 1
+    },
+    {
+      "prefix": "fathom",
+      "count": 1
+    },
+    {
+      "prefix": "filter",
+      "count": 1
+    },
+    {
+      "prefix": "fire",
+      "count": 1
+    },
+    {
+      "prefix": "font",
+      "count": 1
+    },
+    {
+      "prefix": "free",
+      "count": 1
+    },
+    {
+      "prefix": "fs",
+      "count": 1
+    },
+    {
+      "prefix": "game",
+      "count": 1
+    },
+    {
+      "prefix": "gl",
+      "count": 1
+    },
+    {
+      "prefix": "glow",
+      "count": 1
+    },
+    {
+      "prefix": "hullivr",
+      "count": 1
+    },
+    {
+      "prefix": "item",
+      "count": 1
+    },
+    {
+      "prefix": "leaderboards",
+      "count": 1
+    },
+    {
+      "prefix": "logic",
+      "count": 1
+    },
+    {
+      "prefix": "lservercfgfile",
+      "count": 1
+    },
+    {
+      "prefix": "markup",
+      "count": 1
+    },
+    {
+      "prefix": "model",
+      "count": 1
+    },
+    {
+      "prefix": "mouse",
+      "count": 1
+    },
+    {
+      "prefix": "muzzle",
+      "count": 1
+    },
+    {
+      "prefix": "name",
+      "count": 1
+    },
+    {
+      "prefix": "net",
+      "count": 1
+    },
+    {
+      "prefix": "noclip",
+      "count": 1
+    },
+    {
+      "prefix": "npctester",
+      "count": 1
+    },
+    {
+      "prefix": "orb",
+      "count": 1
+    },
+    {
+      "prefix": "path",
+      "count": 1
+    },
+    {
+      "prefix": "pawn",
+      "count": 1
+    },
+    {
+      "prefix": "pickup",
+      "count": 1
+    },
+    {
+      "prefix": "player0",
+      "count": 1
+    },
+    {
+      "prefix": "population",
+      "count": 1
+    },
+    {
+      "prefix": "presettle",
+      "count": 1
+    },
+    {
+      "prefix": "replay",
+      "count": 1
+    },
+    {
+      "prefix": "report",
+      "count": 1
+    },
+    {
+      "prefix": "rpg",
+      "count": 1
+    },
+    {
+      "prefix": "run",
+      "count": 1
+    },
+    {
+      "prefix": "saving",
+      "count": 1
+    },
+    {
+      "prefix": "servercfgfile",
+      "count": 1
+    },
+    {
+      "prefix": "soundevent",
+      "count": 1
+    },
+    {
+      "prefix": "soundscape",
+      "count": 1
+    },
+    {
+      "prefix": "soundsystem",
+      "count": 1
+    },
+    {
+      "prefix": "spawngroup",
+      "count": 1
+    },
+    {
+      "prefix": "speaker",
+      "count": 1
+    },
+    {
+      "prefix": "splitscreen",
+      "count": 1
+    },
+    {
+      "prefix": "street",
+      "count": 1
+    },
+    {
+      "prefix": "subtick",
+      "count": 1
+    },
+    {
+      "prefix": "sys",
+      "count": 1
+    },
+    {
+      "prefix": "target",
+      "count": 1
+    },
+    {
+      "prefix": "team",
+      "count": 1
+    },
+    {
+      "prefix": "teleport",
+      "count": 1
+    },
+    {
+      "prefix": "thumper",
+      "count": 1
+    },
+    {
+      "prefix": "toast",
+      "count": 1
+    },
+    {
+      "prefix": "tool",
+      "count": 1
+    },
+    {
+      "prefix": "ui",
+      "count": 1
+    },
+    {
+      "prefix": "vehicle",
+      "count": 1
+    },
+    {
+      "prefix": "viewmodel",
+      "count": 1
+    },
+    {
+      "prefix": "vis",
+      "count": 1
+    },
+    {
+      "prefix": "zipline",
+      "count": 1
+    }
+  ],
+  "unresolvedSample": [
+    {
+      "line": 4,
+      "key": "adsp_alley_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 7,
+      "key": "adsp_courtyard_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 10,
+      "key": "adsp_debug",
+      "prefix": "adsp"
+    },
+    {
+      "line": 13,
+      "key": "adsp_door_height",
+      "prefix": "adsp"
+    },
+    {
+      "line": 16,
+      "key": "adsp_duct_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 19,
+      "key": "adsp_hall_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 22,
+      "key": "adsp_low_ceiling",
+      "prefix": "adsp"
+    },
+    {
+      "line": 25,
+      "key": "adsp_opencourtyard_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 28,
+      "key": "adsp_openspace_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 31,
+      "key": "adsp_openstreet_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 34,
+      "key": "adsp_openwall_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 37,
+      "key": "adsp_room_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 40,
+      "key": "adsp_street_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 43,
+      "key": "adsp_tunnel_min",
+      "prefix": "adsp"
+    },
+    {
+      "line": 46,
+      "key": "adsp_wall_height",
+      "prefix": "adsp"
+    },
+    {
+      "line": 70,
+      "key": "ai_auto_contact_solver",
+      "prefix": "ai"
+    },
+    {
+      "line": 82,
+      "key": "ai_block_damage",
+      "prefix": "ai"
+    },
+    {
+      "line": 88,
+      "key": "ai_debug_detect_bad_schedules",
+      "prefix": "ai"
+    },
+    {
+      "line": 91,
+      "key": "ai_debug_detect_bad_schedules_print_conditions",
+      "prefix": "ai"
+    },
+    {
+      "line": 94,
+      "key": "ai_debug_directnavprobe",
+      "prefix": "ai"
+    },
+    {
+      "line": 97,
+      "key": "ai_debug_doors",
+      "prefix": "ai"
+    },
+    {
+      "line": 103,
+      "key": "ai_debug_enemies",
+      "prefix": "ai"
+    },
+    {
+      "line": 112,
+      "key": "ai_debug_interrupt_paths",
+      "prefix": "ai"
+    },
+    {
+      "line": 115,
+      "key": "ai_debug_loners",
+      "prefix": "ai"
+    },
+    {
+      "line": 121,
+      "key": "ai_debug_nav",
+      "prefix": "ai"
+    },
+    {
+      "line": 124,
+      "key": "ai_debug_navlinks",
+      "prefix": "ai"
+    },
+    {
+      "line": 127,
+      "key": "ai_debug_phys_force",
+      "prefix": "ai"
+    },
+    {
+      "line": 130,
+      "key": "ai_debug_radial_goal",
+      "prefix": "ai"
+    },
+    {
+      "line": 133,
+      "key": "ai_debug_ragdoll_magnets",
+      "prefix": "ai"
+    },
+    {
+      "line": 136,
+      "key": "ai_debug_schedule_stoppages",
+      "prefix": "ai"
+    },
+    {
+      "line": 139,
+      "key": "ai_debug_scripted_sequence",
+      "prefix": "ai"
+    },
+    {
+      "line": 142,
+      "key": "ai_debug_shoot_positions",
+      "prefix": "ai"
+    },
+    {
+      "line": 145,
+      "key": "ai_debug_speech",
+      "prefix": "ai"
+    },
+    {
+      "line": 148,
+      "key": "ai_debug_squads",
+      "prefix": "ai"
+    },
+    {
+      "line": 160,
+      "key": "ai_debugscriptconditions",
+      "prefix": "ai"
+    },
+    {
+      "line": 163,
+      "key": "ai_disabled",
+      "prefix": "ai"
+    },
+    {
+      "line": 166,
+      "key": "ai_doors_force_animation",
+      "prefix": "ai"
+    },
+    {
+      "line": 169,
+      "key": "ai_elude_time",
+      "prefix": "ai"
+    },
+    {
+      "line": 178,
+      "key": "ai_facingservices_draw_entity_facing",
+      "prefix": "ai"
+    },
+    {
+      "line": 181,
+      "key": "ai_facingservices_generated_target_min_duration",
+      "prefix": "ai"
+    },
+    {
+      "line": 184,
+      "key": "ai_foot_sweep_debug",
+      "prefix": "ai"
+    },
+    {
+      "line": 187,
+      "key": "ai_foot_sweep_enable",
+      "prefix": "ai"
+    },
+    {
+      "line": 190,
+      "key": "ai_foot_sweep_hit_impulse",
+      "prefix": "ai"
+    },
+    {
+      "line": 193,
+      "key": "ai_foot_sweep_hit_impulse_min_mass",
+      "prefix": "ai"
+    },
+    {
+      "line": 196,
+      "key": "ai_foot_sweep_move_scale",
+      "prefix": "ai"
+    },
+    {
+      "line": 199,
+      "key": "ai_foot_sweep_perp_apply",
+      "prefix": "ai"
+    },
+    {
+      "line": 202,
+      "key": "ai_foot_sweep_perp_base",
+      "prefix": "ai"
+    },
+    {
+      "line": 205,
+      "key": "ai_foot_sweep_perp_scale",
+      "prefix": "ai"
+    },
+    {
+      "line": 208,
+      "key": "ai_footstep_delay",
+      "prefix": "ai"
+    },
+    {
+      "line": 211,
+      "key": "ai_force_serverside_ragdoll",
+      "prefix": "ai"
+    },
+    {
+      "line": 217,
+      "key": "ai_hull_trace_epsilon",
+      "prefix": "ai"
+    },
+    {
+      "line": 220,
+      "key": "ai_ignore_collision_player_noclip",
+      "prefix": "ai"
+    },
+    {
+      "line": 223,
+      "key": "ai_inhibit_spawners",
+      "prefix": "ai"
+    },
+    {
+      "line": 226,
+      "key": "ai_keep_interrupt_path_across_schedules",
+      "prefix": "ai"
+    },
+    {
+      "line": 229,
+      "key": "ai_local_navigator_direct_test_versus_static_collision",
+      "prefix": "ai"
+    },
+    {
+      "line": 232,
+      "key": "ai_local_navigator_navmesh_enable",
+      "prefix": "ai"
+    },
+    {
+      "line": 235,
+      "key": "ai_lod_auto_enabled",
+      "prefix": "ai"
+    },
+    {
+      "line": 238,
+      "key": "ai_lod_debug_display",
+      "prefix": "ai"
+    },
+    {
+      "line": 241,
+      "key": "ai_motor_debug",
+      "prefix": "ai"
+    },
+    {
+      "line": 244,
+      "key": "ai_motor_debug_additional_movement_settings",
+      "prefix": "ai"
+    },
+    {
+      "line": 247,
+      "key": "ai_motor_debug_ag1_path",
+      "prefix": "ai"
+    },
+    {
+      "line": 250,
+      "key": "ai_motor_debug_hop",
+      "prefix": "ai"
+    },
+    {
+      "line": 253,
+      "key": "ai_motor_debug_idle_turn",
+      "prefix": "ai"
+    },
+    {
+      "line": 256,
+      "key": "ai_motor_debug_move_heading",
+      "prefix": "ai"
+    },
+    {
+      "line": 259,
+      "key": "ai_motor_debug_move_heading_bad_zones",
+      "prefix": "ai"
+    },
+    {
+      "line": 262,
+      "key": "ai_motor_debug_override_path",
+      "prefix": "ai"
+    },
+    {
+      "line": 265,
+      "key": "ai_motor_debug_show_current_state",
+      "prefix": "ai"
+    },
+    {
+      "line": 268,
+      "key": "ai_motor_debug_show_speed_info",
+      "prefix": "ai"
+    },
+    {
+      "line": 271,
+      "key": "ai_motor_debug_state_deadlocks",
+      "prefix": "ai"
+    },
+    {
+      "line": 274,
+      "key": "ai_motor_debug_stop",
+      "prefix": "ai"
+    },
+    {
+      "line": 277,
+      "key": "ai_motor_debug_transitions",
+      "prefix": "ai"
+    },
+    {
+      "line": 280,
+      "key": "ai_motor_enable_move_heading_bad_zones",
+      "prefix": "ai"
+    },
+    {
+      "line": 283,
+      "key": "ai_motor_ground_enable_detailed_debug_data",
+      "prefix": "ai"
+    },
+    {
+      "line": 286,
+      "key": "ai_motor_max_state_time_active",
+      "prefix": "ai"
+    },
+    {
+      "line": 289,
+      "key": "ai_motor_move_direction_lookahead",
+      "prefix": "ai"
+    },
+    {
+      "line": 292,
+      "key": "ai_motor_nav_links_force_facing_time",
+      "prefix": "ai"
+    },
+    {
+      "line": 295,
+      "key": "ai_motor_path_alignment_max_angular_velocity",
+      "prefix": "ai"
+    },
+    {
+      "line": 298,
+      "key": "ai_motor_planted_turn_lookahead_distance",
+      "prefix": "ai"
+    },
+    {
+      "line": 301,
+      "key": "ai_motor_planted_turn_lookahead_distance_speed",
+      "prefix": "ai"
+    },
+    {
+      "line": 304,
+      "key": "ai_motor_procedural_idle_turn_speed",
+      "prefix": "ai"
+    },
+    {
+      "line": 307,
+      "key": "ai_motor_procedural_idle_turn_threshold",
+      "prefix": "ai"
+    },
+    {
+      "line": 310,
+      "key": "ai_motor_procedural_turn_while_stopping_threshold",
+      "prefix": "ai"
+    },
+    {
+      "line": 313,
+      "key": "ai_motor_use_fast_move_heading_bad_zone_pass",
+      "prefix": "ai"
+    },
+    {
+      "line": 316,
+      "key": "ai_moveprobe_debug",
+      "prefix": "ai"
+    },
+    {
+      "line": 319,
+      "key": "ai_moveprobe_jump_debug",
+      "prefix": "ai"
+    },
+    {
+      "line": 322,
+      "key": "ai_navigator_clipped_path_save",
+      "prefix": "ai"
+    },
+    {
+      "line": 325,
+      "key": "ai_navigator_clipped_path_use_interrupt",
+      "prefix": "ai"
+    },
+    {
+      "line": 328,
+      "key": "ai_navigator_disable_collision_on_stuck",
+      "prefix": "ai"
+    },
+    {
+      "line": 331,
+      "key": "ai_navigator_draw_type_change",
+      "prefix": "ai"
+    },
+    {
+      "line": 337,
+      "key": "ai_navigator_place_waypoints_on_ground",
+      "prefix": "ai"
+    },
+    {
+      "line": 358,
+      "key": "ai_navigator_snap_to_ground_goal",
+      "prefix": "ai"
+    },
+    {
+      "line": 361,
+      "key": "ai_navigator_use_arrival_direction",
+      "prefix": "ai"
+    },
+    {
+      "line": 364,
+      "key": "ai_no_steer",
+      "prefix": "ai"
+    },
+    {
+      "line": 367,
+      "key": "ai_off_nav_show_nearest",
+      "prefix": "ai"
+    },
+    {
+      "line": 397,
+      "key": "ai_path_return_a",
+      "prefix": "ai"
+    },
+    {
+      "line": 400,
+      "key": "ai_path_return_d",
+      "prefix": "ai"
+    },
+    {
+      "line": 403,
+      "key": "ai_path_return_parallel_speed",
+      "prefix": "ai"
+    },
+    {
+      "line": 406,
+      "key": "ai_path_return_t",
+      "prefix": "ai"
+    },
+    {
+      "line": 409,
+      "key": "ai_path_show_discard_immediately",
+      "prefix": "ai"
+    },
+    {
+      "line": 412,
+      "key": "ai_plane_solver_debug",
+      "prefix": "ai"
+    }
+  ]
+}

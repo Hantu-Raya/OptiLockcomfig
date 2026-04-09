@@ -6,6 +6,7 @@ import ImportHead from "@components/head/ImportHead.astro";
 import MainHead from "@components/head/MainHead.astro";
 import Body from "@components/Body.astro";
 import Footer from "@components/Footer.astro";
+import Sponsor from "@components/Sponsor.astro";
 import NavSelector from "@components/NavSelector.astro";
 import DeadlockApp from "@components/deadlock/DeadlockApp";
 import "@styles/deadlock.scss";
@@ -50,6 +51,9 @@ import "@styles/deadlock.scss";
         <div class="collapse navbar-collapse" id="navbarNavDl"></div>
       </div>
     </nav>
+    <section class="container g-0" style="background-color: var(--bs-body-bg)">
+      <Sponsor />
+    </section>
     <DeadlockApp client:only="react" />
     <Footer />
   </Body>
