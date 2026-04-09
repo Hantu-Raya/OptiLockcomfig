@@ -222,7 +222,6 @@ export const getHuds = async () => {
               `Failed to fetch commit ${latestVersion} for ${hudId} (${ghRepo})`,
             );
             hudData.publishDate = new Date(null);
-            throw e;
           }
         } else {
           // Not a GitHub repo, assume it's outdated
